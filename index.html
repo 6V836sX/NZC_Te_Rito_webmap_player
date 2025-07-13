@@ -62,7 +62,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:20, minZoom:1
-        }).fitBounds([[-52.60893784461177,-179.88196755510052],[-19.89184241893642,179.1331486261534]]);
+        }).fitBounds([[-44.12560275254068,171.34075595602815],[-43.05533485848823,173.72273197918102]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -316,7 +316,7 @@
                 case 'ASSOCIATION':
                     return {
                 pane: 'pane_Club_2',
-                radius: 6.0,
+                radius: 2.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
@@ -327,7 +327,7 @@
                 case 'CLUB':
                     return {
                 pane: 'pane_Club_2',
-                radius: 6.0,
+                radius: 2.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
@@ -338,7 +338,7 @@
                 case 'School':
                     return {
                 pane: 'pane_Club_2',
-                radius: 6.0,
+                radius: 2.0,
                 stroke: false,
                 fill: true,
                 fillOpacity: 1,
@@ -366,12 +366,7 @@
                 return L.circleMarker(latlng, style_Club_2_0(feature));
             },
         });
-        var cluster_Club_2 = new L.MarkerClusterGroup({showCoverageOnHover: false,
-            spiderfyDistanceMultiplier: 2});
-        cluster_Club_2.addLayer(layer_Club_2);
-
         bounds_group.addLayer(layer_Club_2);
-        cluster_Club_2.addTo(map);
         function pop_player_loc_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -419,7 +414,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -436,7 +431,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -453,7 +448,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -470,7 +465,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -487,7 +482,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -504,7 +499,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -521,7 +516,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -538,7 +533,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -555,7 +550,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -572,7 +567,7 @@
                     return {
                 pane: 'pane_player_loc_3',
                 shape: 'triangle',
-                radius: 4.0,
+                radius: 2.0,
                 opacity: 1,
                 color: 'rgba(50,87,128,0.6)',
                 dashArray: '',
@@ -623,7 +618,7 @@
         .title += 'Search for a place';
         var overlaysTree = [
             {label: 'player_loc<br /><table><tr><td style="text-align: center;"><img src="legend/player_loc_3_Australia0.png" /></td><td>Australia</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_Fiji1.png" /></td><td>Fiji</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_Germany2.png" /></td><td>Germany</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_Nauru3.png" /></td><td>Nauru</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_NewZealand4.png" /></td><td>New Zealand</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_Norway5.png" /></td><td>Norway</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_Singapore6.png" /></td><td>Singapore</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_UnitedArabEmirates7.png" /></td><td>United Arab Emirates</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_UnitedKingdom8.png" /></td><td>United Kingdom</td></tr><tr><td style="text-align: center;"><img src="legend/player_loc_3_UnitedStatesofAmerica9.png" /></td><td>United States of America</td></tr></table>', layer: cluster_player_loc_3},
-            {label: 'Club<br /><table><tr><td style="text-align: center;"><img src="legend/Club_2_ASSOCIATION0.png" /></td><td>ASSOCIATION</td></tr><tr><td style="text-align: center;"><img src="legend/Club_2_CLUB1.png" /></td><td>CLUB</td></tr><tr><td style="text-align: center;"><img src="legend/Club_2_School2.png" /></td><td>School</td></tr></table>', layer: cluster_Club_2},
+            {label: 'Club<br /><table><tr><td style="text-align: center;"><img src="legend/Club_2_ASSOCIATION0.png" /></td><td>ASSOCIATION</td></tr><tr><td style="text-align: center;"><img src="legend/Club_2_CLUB1.png" /></td><td>CLUB</td></tr><tr><td style="text-align: center;"><img src="legend/Club_2_School2.png" /></td><td>School</td></tr></table>', layer: layer_Club_2},
             {label: 'Suburb_Boundaries_joined<br /><table><tr><td style="text-align: center;"><img src="legend/Suburb_Boundaries_joined_1_0160.png" /></td><td>0 - 1.6</td></tr><tr><td style="text-align: center;"><img src="legend/Suburb_Boundaries_joined_1_16431.png" /></td><td>1.6 - 4.3</td></tr><tr><td style="text-align: center;"><img src="legend/Suburb_Boundaries_joined_1_43842.png" /></td><td>4.3 - 8.4</td></tr><tr><td style="text-align: center;"><img src="legend/Suburb_Boundaries_joined_1_841373.png" /></td><td>8.4 - 13.7</td></tr><tr><td style="text-align: center;"><img src="legend/Suburb_Boundaries_joined_1_137224.png" /></td><td>13.7 - 22</td></tr><tr><td style="text-align: center;"><img src="legend/Suburb_Boundaries_joined_1_223685.png" /></td><td>22 - 36.8</td></tr><tr><td style="text-align: center;"><img src="legend/Suburb_Boundaries_joined_1_36812716.png" /></td><td>36.8 - 127.1</td></tr></table>', layer: layer_Suburb_Boundaries_joined_1},
             {label: "OSM Standard", layer: layer_OSMStandard_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
